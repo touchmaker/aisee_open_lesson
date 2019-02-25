@@ -29,20 +29,19 @@
  ## 安装
 
  ### for MAC or Linux 
- ## 针对MAC或LINUX系统
+ ### 针对MAC或LINUX系统
  * install python 2.6 for example
  * install cv2 with pip
-
- ### for Microsoft VisualStudio 2013 +
- ### 针对WIN64系统
- * 仅需要安装 Python 包
- * 安装 opencv 包
  
- ``` powershell
+  ``` powershell
 pip install --upgrade setuptools
 pip install opencv-python
  ```
 
+ #### for Microsoft VisualStudio 2013 +
+ #### 针对WIN64系统
+ * 仅需要安装 Python 和 opencv 包
+ 
 ## 测试安装是否成功环境 在Python环境
 * test code
  ``` python 
@@ -50,18 +49,6 @@ pip install opencv-python
  print cv2.CV_AA
 ```
  
- ---
- 
- ## sequence
- ```
-graph TD
- A[Startup ] -->|WIN API|B( Show Windows)
-    B --> C(Processing)
-    C --> D{Show final result}
-    C -->|Yes| E[Exit app]
-    E -->|No| B
-
-```
  ---
  
  ## First examples in CV
@@ -110,14 +97,13 @@ cap.release()
 
 cv2.destroyAllWindows() 
 ```
- ---
 
 ---
 
 ## CVUI
 A (very) simple UI lib built on top of OpenCV drawing primitives. Other UI libs, such as imgui, require a graphical backend (e.g. OpenGL) to work, so if you want to use imgui in a OpenCV app, you must make it OpenGL enabled, for instance. It is not the case with cvui, which uses only OpenCV drawing primitives to do all the rendering (no OpenGL or Qt required).
 
---
+---
 ## UI example
 ```python
 import numpy as np
@@ -146,16 +132,15 @@ while True:
 * NOTES change code CV2_LINE to CV_AA
 
 ---
-# checkbox emaple
+# Homework 1
+# 作业
 
-## Image video correction methods
-to be continue
+创建一个可以显示摄像头内容的窗体，在窗体内部放置一个checkbox，通过checkbox 来改变图形的性质
+比如颜色图像或黑白图像
+
+
 ---
 
-## Table/grid gathing data
-to be continue
----
+# Fin
 
-## simple ocr num(0-9)
- to be continue
 ---
