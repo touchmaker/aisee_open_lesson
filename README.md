@@ -72,3 +72,7 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
 ```
+
+opencv_for_human.md 文件
+可以用 GitHub tajpure/vortex 编辑
+地址 https://github.com/tajpure/vortex
