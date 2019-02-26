@@ -26,33 +26,71 @@
  ---
 
  ## Install
- ## 安装
+ 
 
- ### for MAC or Linux 
- ### 针对MAC或LINUX系统
- * install python 2.6 for example
- * install cv2 with pip
+ ### 针对非MS Microsoft VisualStudio 的方法 比如MAC
+ * install python 2.6 
+ * install cv2 numpy matplotlib cvui
  
   ``` powershell
 pip install --upgrade setuptools
-pip install opencv-python
+pip install matplotlib
+pip install numpy
+pip install opencv-python==版本号
  ```
-
- #### for Microsoft VisualStudio 2013 +
- #### 针对WIN64系统
- * 仅需要安装 Python 和 opencv 包
+---
+*  Via pip you can specify the package version to install using the following: 指定版本号
  
-## 测试安装是否成功环境 在Python环境
+``` bash
+pip install opencv-python==2.4.9
+```
+However, that package does not seem to be available on pypi.
+A little trick for checking available versions:
+
+``` bash
+pip install opencv-python==
+``` 
+Which returns:
+Could not find a version that satisfies the requirement opencv-python== 
+(from versions: 3.1.0.0, 3.1.0.1, 3.1.0.2, 3.1 .0.3, 3.1.0.5, 3.2.0.6, 3.2.0.7) 
+
+---
+
+ ## 安装 Visual Studio 2017 Community
+
+  ### 目前仅在 Visual Studio for Windows 中提供 Python 支持；在 Mac 和 Linux 上，可通过 Visual Studio Code 获取 Python 支持。
+下载并运行适用于 Windows 的最新 Visual Studio 2017 安装程序（版本 15.2 及更高版本提供 Python 支持）。 如果已安装 Visual Studio，请运行 Visual Studio 安装程序
+
+   ### 提示
+  Community Edition 适用于个体开发者、课堂学习、学术研究和开放源代码开发。 对于其他用途，请安装 Visual Studio 2017 Professional 或 Visual Studio 2017 Enterprise。
+ 
+ ---
+ 
+  ### 对于 Python，请选择 Python 开发工作负载，然后选择“安装”：
+
+  ### 若要快速测试 Python 支持，请启动 Visual Studio，按 Alt+I 打开 Python 交互窗口，然后输入
+  ``` python
+  2+2
+  ``` 
+  
+  ### 如果看不到输出 4，请重新检查步骤。
+
+ ---
+  ###  安装包教程
+ https://docs.microsoft.com/zh-cn/visualstudio/python/tutorial-working-with-python-in-visual-studio-step-05-installing-packages?view=vs-2017
+ ---
+ 
+  ### 测试安装是否成功环境 在Python环境
 * test code
  ``` python 
  import cv2
  print cv2.CV_AA
 ```
- 
+
  ---
  
  ## First examples in CV
- ## 第一个案例
+ ## 入门案例
  * loading picture
  * loading video data
 
@@ -118,13 +156,10 @@ frame = np.zeros((200, 400, 3), np.uint8)
 while True:
     frame[:] = (49, 52, 49)
     cvui.text(frame, 10, 15, 'Hello world!')
-
     # Update cvui internal stuff
     cvui.update()
-
     # Show window content
     cv2.imshow(WINDOW_NAME, frame)
-    
     if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
 ```
@@ -132,7 +167,21 @@ while True:
 * NOTES change code CV2_LINE to CV_AA
 
 ---
-# Homework 1
+# 使用matplotlib
+```python
+import numpy as np 
+import cv2 
+from matplotlib import pyplot as plt 
+ 
+img = cv2.imread('messi5.jpg',0) 
+plt.imshow(img, cmap = 'gray', interpolation = 'bicubic') 
+plt.xticks([]), plt.yticks([]) # to hide tick values on X and Y axis 
+plt.show()
+```
+
+
+---
+# Homework
 # 作业
 
 创建一个可以显示摄像头内容的窗体，在窗体内部放置一个checkbox，通过checkbox 来改变图形的性质
