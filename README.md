@@ -4,9 +4,9 @@
   with examples and source code
   
 ---
-<i class="material-icons">notifications_none</i> 重点利用Opencv积极联系Python的技能
+ 重点利用Opencv积极联系Python的技能
 
-  ---
+---
  ## 课程特色 Fetures
  ### 第一阶段
  * introdue to compter vision (cv2)
@@ -20,8 +20,6 @@
  * TrainData DIY 字体识别库diy
  * Image prop. correction methods 图片透视校正
  * Table/grid/web data fetch 表格数据榨取
- ---
-
  ---
 
 # AI SEE
@@ -55,42 +53,19 @@ However, that package does not seem to be available on pypi.
 A little trick for checking available versions:
 
 ``` bash
-pip install opencv-python==
+pip install opencv-python
 ``` 
-Which returns:
-Could not find a version that satisfies the requirement opencv-python== 
-(from versions: 3.1.0.0, 3.1.0.1, 3.1.0.2, 3.1 .0.3, 3.1.0.5, 3.2.0.6, 3.2.0.7) 
-
 ---
 
 ### 如果以上都不行 ，把D:\opencv\opencv\build\python\2.7\x64 下的cv2.pyd 复制到 C:\Python27\Lib的目录下
 
 ---
 
- ## 安装 Visual Studio 2017 Community
-
-  ### 目前仅在 Visual Studio for Windows 中提供 Python 支持；在 Mac 和 Linux 上，可通过 Visual Studio Code 获取 Python 支持。
-下载并运行适用于 Windows 的最新 Visual Studio 2017 安装程序（版本 15.2 及更高版本提供 Python 支持）。 如果已安装 Visual Studio，请运行 Visual Studio 安装程序
-
- ---
- 
-  ### 对于 Python，请选择 Python 开发工作负载，然后选择“安装”：
-
-  ### 若要快速测试 Python 支持，请启动 Visual Studio，按 Alt+I 打开 Python 交互窗口，然后输入
-  ``` python
-  2+2
-  ``` 
-  
-  ### 如果看不到输出 4，请重新检查步骤。
- 
- ---
- 
-  ### 测试安装是否成功环境 在Python环境
-* test code
+ ### 测试安装是否成功环境 在Python环境
  ``` python 
  import cv2
  print cv2.CV_AA
-```
+ ```
 
  ---
  
@@ -269,7 +244,6 @@ print(text)
 ### 打包字库
 
 ---
-<i class="material-icons">sentiment_very_satisfied</i>
 ## 上述过程 easy_font_batch.py
 ``` python
 
@@ -285,8 +259,6 @@ print(text)
 # AI SEE
 # 第二阶段
 
----
-#  可以进阶了吗？
 ---
 ## basic image processing 
 ## 基本图像处理
