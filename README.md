@@ -163,7 +163,7 @@ plt.show()
 
 ### CVUI 是一个基于 OpenCV 自建绘图模块的图形界面库，其他的图形界面库，如imgui，需要界面后台库Opengl或QT支持，如果我们只需要使用一些比较常见的UI功能，我们只需要OpenCV来完成所有的渲染功能。 
 ---
-![](screensnap.png)
+![](result.png)
 ---
 
 ## UI example
